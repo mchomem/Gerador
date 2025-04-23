@@ -10,30 +10,32 @@ public class VoArquivoConfiguracao {
 	private char[] senha;
 	private String descricao;
 	private String dataHora;
-	
-	public VoArquivoConfiguracao() {}
-	
-	public VoArquivoConfiguracao(String nome, String sgbdr, String usuario, String url, String driver, char[] senha, String descricao, String dataHora) {
-		
-		this.nome          = nome;
-		this.sgbdr         = sgbdr;
-		this.usuario       = usuario;
-		this.url           = url;
-		this.driver        = driver;
-		this.senha         = senha;
-		this.descricao     = descricao;
-		this.dataHora      = dataHora;
-		
+
+	public VoArquivoConfiguracao() {
+	}
+
+	public VoArquivoConfiguracao(String nome, String sgbdr, String usuario, String url, String driver, char[] senha,
+			String descricao, String dataHora) {
+
+		this.nome = nome;
+		this.sgbdr = sgbdr;
+		this.usuario = usuario;
+		this.url = url;
+		this.driver = driver;
+		this.senha = senha;
+		this.descricao = descricao;
+		this.dataHora = dataHora;
+
 	}
 
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getSgbdr() {
 		return sgbdr;
 	}
@@ -73,26 +75,26 @@ public class VoArquivoConfiguracao {
 	public void setSenha(char[] senha) {
 		this.senha = senha;
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
-	
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+
 	public String getDataHora() {
 		return dataHora;
 	}
-	
+
 	public void setDataHora(String dataHora) {
 		this.dataHora = dataHora;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nome;
 	}
-	
+
 }

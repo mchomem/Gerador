@@ -30,38 +30,38 @@ public class FrmMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public FrmMenu() {
-		
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, dimension.width, dimension.height);
 		pnl = new JPanel();
 		pnl.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(pnl);
 		pnl.setLayout(null);
-		
+
 		desktopPane = new JDesktopPane();
 		desktopPane.setBounds(0, 20, this.getWidth(), this.getHeight());
 		desktopPane.setBackground(Color.GRAY);
 		pnl.add(desktopPane);
-		
+
 		mnbMenu = new JMenuBar();
 		mnbMenu.setBounds(0, 0, this.getWidth(), 21);
 		pnl.add(mnbMenu);
-		
+
 		mnSistema = new JMenu("Sistema");
 		mnbMenu.add(mnSistema);
-		
+
 		mntmConfiguracao = new JMenuItem("Configuração...");
 		mnSistema.add(mntmConfiguracao);
-		
+
 		mntmGerador = new JMenuItem("Gerador");
 		mnSistema.add(mntmGerador);
-		
+
 		separator = new JSeparator();
 		mnSistema.add(separator);
-		
+
 		mntmSair = new JMenuItem("Sair");
 		mnSistema.add(mntmSair);
-		
+
 		setVisible(true);
 	}
 

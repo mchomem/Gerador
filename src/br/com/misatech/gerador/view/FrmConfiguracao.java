@@ -63,159 +63,167 @@ public class FrmConfiguracao extends JInternalFrame {
 	 * Construtor padrão da classe.
 	 */
 	public FrmConfiguracao() {
-		
+
 		setClosable(true);
 		setTitle("Configura\u00E7\u00E3o de Perfil de Conex\u00E3o");
 		setResizable(false);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 671, 671);
 		this.setLocation((this.dimension.width - this.getWidth()) / 2, 25);
-		
+
 		pnlConteudo = new JPanel();
 		pnlConteudo.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(pnlConteudo);
 		pnlConteudo.setLayout(null);
-		
+
 		pnlInformacoes = new JPanel();
-		pnlInformacoes.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Manuten\u00E7\u00E3o", TitledBorder.LEFT, TitledBorder.TOP, null, Color.BLUE));
+		pnlInformacoes.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Manuten\u00E7\u00E3o",
+				TitledBorder.LEFT, TitledBorder.TOP, null, Color.BLUE));
 		pnlInformacoes.setBounds(12, 41, 630, 288);
 		pnlConteudo.add(pnlInformacoes);
 		pnlInformacoes.setLayout(null);
-		
+
 		lblUsurio = new JLabel("Usu\u00E1rio:");
 		lblUsurio.setBounds(20, 150, 60, 30);
 		pnlInformacoes.add(lblUsurio);
-		
+
 		txtUsuario = new JTextField();
 		txtUsuario.setBounds(80, 150, 200, 30);
 		pnlInformacoes.add(txtUsuario);
 		txtUsuario.setColumns(10);
-		
+
 		lblSenha = new JLabel("Senha:");
 		lblSenha.setBounds(20, 180, 60, 30);
 		pnlInformacoes.add(lblSenha);
-		
+
 		pswSenha = new JPasswordField();
 		pswSenha.setBounds(80, 180, 200, 30);
 		pnlInformacoes.add(pswSenha);
-		
+
 		lblUrl = new JLabel("Url:");
 		lblUrl.setBounds(20, 90, 60, 30);
 		pnlInformacoes.add(lblUrl);
-		
+
 		txtUrl = new JTextField();
 		txtUrl.setBounds(80, 90, 325, 30);
 		pnlInformacoes.add(txtUrl);
 		txtUrl.setColumns(10);
-		
+
 		lblDriver = new JLabel("Driver:");
 		lblDriver.setBounds(20, 120, 60, 30);
 		pnlInformacoes.add(lblDriver);
-		
+
 		txtDriver = new JTextField();
 		txtDriver.setBounds(80, 120, 325, 30);
 		pnlInformacoes.add(txtDriver);
 		txtDriver.setColumns(10);
-		
+
 		lblDescricao = new JLabel("Descri\u00E7\u00E3o:");
 		lblDescricao.setBounds(20, 210, 60, 30);
 		pnlInformacoes.add(lblDescricao);
-		
+
 		txtDescricao = new JTextField();
 		txtDescricao.setBounds(80, 210, 500, 30);
 		pnlInformacoes.add(txtDescricao);
 		txtDescricao.setColumns(10);
-		
+
 		lblDataHora = new JLabel("Data/hora:");
 		lblDataHora.setBounds(20, 240, 60, 30);
 		pnlInformacoes.add(lblDataHora);
-		
+
 		ftfDataHora = new JFormattedTextField(FormUtils.formatarMascaraCampos(ftfDataHora, MascaraCampo.enDataHora));
 		ftfDataHora.setBackground(Color.WHITE);
 		ftfDataHora.setEditable(false);
 		ftfDataHora.setBounds(80, 240, 131, 30);
 		pnlInformacoes.add(ftfDataHora);
-		
+
 		lblNome = new JLabel("Nome:");
 		lblNome.setBounds(20, 30, 60, 30);
 		pnlInformacoes.add(lblNome);
-		
+
 		txtNome = new JTextField();
 		txtNome.setFont(new Font("Dialog", Font.PLAIN, 12));
 		txtNome.setEditable(true);
 		txtNome.setBounds(80, 30, 200, 30);
 		pnlInformacoes.add(txtNome);
-		
+
 		lblSgbdr = new JLabel("SGBDR:");
 		lblSgbdr.setBounds(20, 60, 60, 30);
 		pnlInformacoes.add(lblSgbdr);
-		
+
 		cmbSgbdr = new JComboBox<String>();
 		cmbSgbdr.setBounds(80, 60, 200, 30);
 		pnlInformacoes.add(cmbSgbdr);
-		
+
 		pnlLogoSgbdr = new JPanel();
 		pnlLogoSgbdr.setBackground(Color.WHITE);
 		pnlLogoSgbdr.setBounds(445, 27, 170, 120);
 		pnlInformacoes.add(pnlLogoSgbdr);
 		pnlLogoSgbdr.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
+
 		btnAjudaUrl = new JButton("");
 		btnAjudaUrl.setToolTipText("Exemplos de URL");
-		btnAjudaUrl.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/help.png")));
+		btnAjudaUrl.setIcon(
+				new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/help.png")));
 		btnAjudaUrl.setBounds(410, 90, 30, 30);
 		pnlInformacoes.add(btnAjudaUrl);
-		
+
 		btnAjudaDriver = new JButton("");
-		btnAjudaDriver.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/help.png")));
+		btnAjudaDriver.setIcon(
+				new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/help.png")));
 		btnAjudaDriver.setToolTipText("Exmplos");
 		btnAjudaDriver.setBounds(410, 120, 30, 30);
 		pnlInformacoes.add(btnAjudaDriver);
-		
+
 		toolBar = new JToolBar();
 		toolBar.setFloatable(false);
 		toolBar.setBounds(0, 0, 655, 30);
 		pnlConteudo.add(toolBar);
-		
+
 		btnInicializar = new JButton("");
 		btnInicializar.setBorderPainted(false);
 		toolBar.add(btnInicializar);
 		btnInicializar.setToolTipText("Inicializar");
-		btnInicializar.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/page_white.png")));
-		
+		btnInicializar.setIcon(new ImageIcon(
+				FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/page_white.png")));
+
 		btnGravar = new JButton("");
 		btnGravar.setBorderPainted(false);
 		toolBar.add(btnGravar);
 		btnGravar.setToolTipText("Gravar");
-		btnGravar.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/disk.png")));
-		
+		btnGravar.setIcon(
+				new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/disk.png")));
+
 		btnExcluir = new JButton("");
 		btnExcluir.setBorderPainted(false);
 		toolBar.add(btnExcluir);
 		btnExcluir.setToolTipText("Excluir");
-		btnExcluir.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/cross.png")));
-		
+		btnExcluir.setIcon(
+				new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/cross.png")));
+
 		btnConsultar = new JButton("");
 		btnConsultar.setBorderPainted(false);
 		toolBar.add(btnConsultar);
 		btnConsultar.setToolTipText("Consultar");
-		btnConsultar.setIcon(new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/magnifier.png")));
-		
+		btnConsultar.setIcon(
+				new ImageIcon(FrmConfiguracao.class.getResource("/br/com/misatech/gerador/view/images/magnifier.png")));
+
 		pnlRegistros = new JPanel();
-		pnlRegistros.setBorder(new TitledBorder(null, "Registros", TitledBorder.LEADING, TitledBorder.TOP, null, Color.BLUE));
+		pnlRegistros.setBorder(
+				new TitledBorder(null, "Registros", TitledBorder.LEADING, TitledBorder.TOP, null, Color.BLUE));
 		pnlRegistros.setBounds(12, 340, 630, 290);
 		pnlConteudo.add(pnlRegistros);
 		pnlRegistros.setLayout(null);
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 37, 610, 242);
 		pnlRegistros.add(scrollPane);
-		
+
 		table = new JTable();
 		scrollPane.setViewportView(table);
-		
+
 		setVisible(true);
-		
+
 	}
 
 	public JPanel getPnlConteudo() {

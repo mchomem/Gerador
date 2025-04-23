@@ -14,45 +14,47 @@ import javax.swing.JList;
 
 // Implementação baseada em http://stackoverflow.com/questions/13336802/how-to-create-jlist-with-icon-and-text
 
-public class FileListCellRenderer extends DefaultListCellRenderer  {
+public class FileListCellRenderer extends DefaultListCellRenderer {
 
 	private static final long serialVersionUID = -7799441088157759804L;
-    private JLabel label;
-    private Color textSelectionColor          = Color.BLACK;
-    private Color backgroundSelectionColor    = new Color(224, 240, 255);
-    private Color textNonSelectionColor       = Color.BLACK;
-    private Color backgroundNonSelectionColor = Color.WHITE;
+	private JLabel label;
+	private Color textSelectionColor = Color.BLACK;
+	private Color backgroundSelectionColor = new Color(224, 240, 255);
+	private Color textNonSelectionColor = Color.BLACK;
+	private Color backgroundNonSelectionColor = Color.WHITE;
 
-    public FileListCellRenderer() {
-    	
-        label = new JLabel();
-        label.setOpaque(true);
-        
-    }
+	public FileListCellRenderer() {
 
-    @Override
-    public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean selected, boolean expanded) {
+		label = new JLabel();
+		label.setOpaque(true);
 
-        try {
-        	InputStream inputStream = FileListCellRenderer.class.getResourceAsStream("/br/com/misatech/gerador/view/images/application_view_columns.png");
-			label.setIcon(new ImageIcon( ImageIO.read(inputStream) ));
+	}
+
+	@Override
+	public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean selected,
+			boolean expanded) {
+
+		try {
+			InputStream inputStream = FileListCellRenderer.class
+					.getResourceAsStream("/br/com/misatech/gerador/view/images/application_view_columns.png");
+			label.setIcon(new ImageIcon(ImageIO.read(inputStream)));
 		} catch (IOException e) {
 			System.err.println(e.getMessage());
 		}
-        
-        label.setText(value.toString());
 
-        if (selected) {
-            label.setBackground(backgroundSelectionColor);
-            label.setForeground(textSelectionColor);
-            label.setFont(new Font("Tahoma", Font.BOLD, 11));
-        } else {
-            label.setBackground(backgroundNonSelectionColor);
-            label.setForeground(textNonSelectionColor);
-            label.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        }
+		label.setText(value.toString());
 
-        return label;
-    }
-	
+		if (selected) {
+			label.setBackground(backgroundSelectionColor);
+			label.setForeground(textSelectionColor);
+			label.setFont(new Font("Tahoma", Font.BOLD, 11));
+		} else {
+			label.setBackground(backgroundNonSelectionColor);
+			label.setForeground(textNonSelectionColor);
+			label.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		}
+
+		return label;
+	}
+
 }

@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 public class FrmSplash extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 	private JPanel pnl;
 	private JLabel lblNomeProduto;
@@ -29,7 +29,7 @@ public class FrmSplash extends JFrame {
 	 * Create the frame.
 	 */
 	public FrmSplash() {
-		
+
 		setAlwaysOnTop(true);
 		setUndecorated(true);
 		setResizable(false);
@@ -40,41 +40,43 @@ public class FrmSplash extends JFrame {
 		pnl.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(pnl);
 		pnl.setLayout(null);
-		
+
 		lblNomeProduto = new JLabel("Nome Produto");
 		lblNomeProduto.setForeground(new Color(212, 0, 0));
 		lblNomeProduto.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNomeProduto.setFont(new Font("Impact", Font.PLAIN, 60));
 		lblNomeProduto.setBounds(0, 38, 500, 64);
 		pnl.add(lblNomeProduto);
-		
+
 		lblVersao = new JLabel("Vers\u00E3o:");
 		lblVersao.setBounds(10, 280, 46, 14);
 		pnl.add(lblVersao);
-		
+
 		lblValorVersao = new JLabel("0.00.000");
 		lblValorVersao.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblValorVersao.setBounds(81, 280, 96, 14);
 		pnl.add(lblValorVersao);
-		
-		lblcCopyrigth = new JLabel("(c) Copyright, 2014. Todos os direitos reservados. Este software  \u00E9 marca registrada de Misael da C. Homem.");
+
+		lblcCopyrigth = new JLabel(
+				"(c) Copyright, 2014. Todos os direitos reservados. Este software  \u00E9 marca registrada de Misael da C. Homem.");
 		lblcCopyrigth.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		lblcCopyrigth.setBounds(10, 305, 480, 14);
 		pnl.add(lblcCopyrigth);
-		
+
 		lblcCopyrigth01 = new JLabel("Oracle e Java s\u00E3o marcas registradas da Oracle e/ou suas afiliadas.");
 		lblcCopyrigth01.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		lblcCopyrigth01.setBounds(10, 320, 480, 14);
 		pnl.add(lblcCopyrigth01);
-		
+
 		lblImagemSplash = new JLabel("");
 		lblImagemSplash.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblImagemSplash.setIcon(new ImageIcon(FrmSplash.class.getResource("/br/com/misatech/gerador/view/images/Splash.png")));
+		lblImagemSplash
+				.setIcon(new ImageIcon(FrmSplash.class.getResource("/br/com/misatech/gerador/view/images/Splash.png")));
 		lblImagemSplash.setBounds(0, 0, 500, 345);
 		pnl.add(lblImagemSplash);
-		
+
 		setVisible(true);
-		
+
 	}
 
 	public JPanel getPnl() {
@@ -132,6 +134,5 @@ public class FrmSplash extends JFrame {
 	public void setLblImagemSplash(JLabel lblImagemSplash) {
 		this.lblImagemSplash = lblImagemSplash;
 	}
-
 
 }

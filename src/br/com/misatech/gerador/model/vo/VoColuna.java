@@ -4,25 +4,28 @@ import br.com.misatech.gerador.model.en.EnTipoDado;
 
 public class VoColuna {
 
-	private String             nomeColuna;
-	private EnTipoDado     tipoDado;
-	private boolean            primaryKey;     // Esse campo pode continar sendo um boolean
-	// TODO analisar a criação de um tipo ForeignKey contendo nome do campo e nome da tabela apontada (tabela pai).
-	private boolean            foreignKey;     // Será necessário o nome da tabela Pai ao qual esse campo se referencia.
-	private boolean            notNull;
-	private float              tamanho;
-	
-	public VoColuna() {}
+	private String nomeColuna;
+	private EnTipoDado tipoDado;
+	private boolean primaryKey; // Esse campo pode continar sendo um boolean
+	// TODO analisar a criação de um tipo ForeignKey contendo nome do campo e nome
+	// da tabela apontada (tabela pai).
+	private boolean foreignKey; // Será necessário o nome da tabela Pai ao qual esse campo se referencia.
+	private boolean notNull;
+	private float tamanho;
 
-	public VoColuna(String nomeColuna, EnTipoDado tipoDado, boolean primaryKey, boolean foreignKey, boolean notNull, float tamanho) {
-		
-		this.nomeColuna   = nomeColuna;
-		this.tipoDado     = tipoDado;
-		this.primaryKey   = primaryKey;
-		this.foreignKey   = foreignKey;
-		this.notNull      = notNull;
-		this.tamanho      = tamanho;
-		
+	public VoColuna() {
+	}
+
+	public VoColuna(String nomeColuna, EnTipoDado tipoDado, boolean primaryKey, boolean foreignKey, boolean notNull,
+			float tamanho) {
+
+		this.nomeColuna = nomeColuna;
+		this.tipoDado = tipoDado;
+		this.primaryKey = primaryKey;
+		this.foreignKey = foreignKey;
+		this.notNull = notNull;
+		this.tamanho = tamanho;
+
 	}
 
 	public String getNomeColuna() {
@@ -56,7 +59,7 @@ public class VoColuna {
 	public void setForeignKey(boolean foreignKey) {
 		this.foreignKey = foreignKey;
 	}
-	
+
 	public boolean isNotNull() {
 		return notNull;
 	}
@@ -72,5 +75,5 @@ public class VoColuna {
 	public void setTamanho(float tamanho) {
 		this.tamanho = tamanho;
 	}
-	
+
 }

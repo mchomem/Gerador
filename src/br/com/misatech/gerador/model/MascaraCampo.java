@@ -8,36 +8,31 @@ package br.com.misatech.gerador.model;
  */
 public enum MascaraCampo {
 
-	enData
-	, enHora
-	, enDataHora
-	, enCPF
-	, enCNPJ
-	, enRG;
-	
+	enData, enHora, enDataHora, enCPF, enCNPJ, enRG;
+
 	public String getValor() {
-		
-		switch(this) {
-		
-			case enData:
-				return "##/##/####";
-				
-			case enHora:
-				return "##:##:##";
-			
-			case enDataHora:
-				return "##/##/#### ##:##:##";
-				
-			case enCPF:
-				return "##.###.###-##";
-				
-			case enCNPJ:
-				return "##.###.###/####-##";
-			
-			default:
-				return "";
-				
+
+		switch (this) {
+
+		case enData:
+			return "##/##/####";
+
+		case enHora:
+			return "##:##:##";
+
+		case enDataHora:
+			return "##/##/#### ##:##:##";
+
+		case enCPF:
+			return "##.###.###-##";
+
+		case enCNPJ:
+			return "##.###.###/####-##";
+
+		default:
+			return "";
+
 		}
 	}
-	
+
 }

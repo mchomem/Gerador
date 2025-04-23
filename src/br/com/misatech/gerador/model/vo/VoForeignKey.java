@@ -7,16 +7,17 @@ public class VoForeignKey {
 	private String nomeColunaPK;
 	private String nomeColunaFK;
 	private String nomeFK;
-	
-	public VoForeignKey() {}
-	
+
+	public VoForeignKey() {
+	}
+
 	public VoForeignKey(String nomeTabelaPai, String nomeColunaPK, String nomeColunaFK, String nomeFK) {
-		
+
 		this.nomeTabelaPai = nomeTabelaPai;
-		this.nomeColunaPK  = nomeColunaPK;
-		this.nomeColunaFK  = nomeColunaFK;
-		this.nomeFK        = nomeFK;
-		
+		this.nomeColunaPK = nomeColunaPK;
+		this.nomeColunaFK = nomeColunaFK;
+		this.nomeFK = nomeFK;
+
 	}
 
 	public String getNomeTabelaPai() {
@@ -34,7 +35,7 @@ public class VoForeignKey {
 	public void setNomeColunaPK(String nomeColunaPK) {
 		this.nomeColunaPK = nomeColunaPK;
 	}
-	
+
 	public String getNomeColunaFK() {
 		return nomeColunaFK;
 	}

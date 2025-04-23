@@ -3,21 +3,22 @@ package br.com.misatech.gerador.model.vo;
 import java.util.List;
 
 public class VoTabela {
-	
-	private String             nomeTabela;
-	private List<VoColuna>     colunas;
+
+	private String nomeTabela;
+	private List<VoColuna> colunas;
 	private List<VoForeignKey> voForeignKey;
-	private boolean            gerar;
-	
-	public VoTabela() {}
-	
+	private boolean gerar;
+
+	public VoTabela() {
+	}
+
 	public VoTabela(String nomeTabela, List<VoColuna> colunas, List<VoForeignKey> voForeignKey, boolean gerar) {
-		
-		this.nomeTabela   = nomeTabela;
-		this.colunas      = colunas;
+
+		this.nomeTabela = nomeTabela;
+		this.colunas = colunas;
 		this.voForeignKey = voForeignKey;
-		this.gerar        = gerar;
-		
+		this.gerar = gerar;
+
 	}
 
 	public String getNomeTabela() {
@@ -35,11 +36,11 @@ public class VoTabela {
 	public void setColunas(List<VoColuna> colunas) {
 		this.colunas = colunas;
 	}
-	
+
 	public List<VoForeignKey> getVoForeignKey() {
 		return voForeignKey;
 	}
-	
+
 	public void setVoForeignKey(List<VoForeignKey> voForeignKey) {
 		this.voForeignKey = voForeignKey;
 	}

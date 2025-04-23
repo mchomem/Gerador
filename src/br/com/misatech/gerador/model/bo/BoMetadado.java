@@ -16,81 +16,80 @@ import br.com.misatech.gerador.model.vo.VoTabela;
  *
  */
 public class BoMetadado {
-	
+
 	private DaoMetadado daoMetadado;
-	
+
 	public BoMetadado() {
-		
+
 		this.daoMetadado = new DaoMetadado();
-		
+
 	}
-	
-	public VoMetadado lerMetadado(Connection conn) throws ClassNotFoundException, FileNotFoundException, SQLException, IOException {
-		
+
+	public VoMetadado lerMetadado(Connection conn)
+			throws ClassNotFoundException, FileNotFoundException, SQLException, IOException {
+
 		return this.daoMetadado.obterMetaDados(conn);
-		
+
 	}
-	
-	
+
 	/// Java
-	
+
 	public String gerarStringClasseEntidadeJava(VoTabela voTabela) {
-		
+
 		BoResultadoVoJava boResultadoVo = new BoResultadoVoJava();
 		return boResultadoVo.formatarClasseEntidadeJava(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseNegocioJava(VoTabela voTabela) {
-		
+
 		BoResultadoVoJava boResultadoVo = new BoResultadoVoJava();
 		return boResultadoVo.formatarClasseNegocioJava(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseDaoJava(VoTabela voTabela) {
-		
+
 		BoResultadoVoJava boResultadoVo = new BoResultadoVoJava();
 		return boResultadoVo.formatarClasseDaoJava(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseDaoConexaoJava() {
-		
+
 		BoResultadoVoJava boResultadoVo = new BoResultadoVoJava();
 		return boResultadoVo.formatarClasseDaoConexaoJava();
-		
+
 	}
-	
-	
+
 	/// C#.NET
-	
+
 	public String gerarStringClasseEntidadeCSNet(VoTabela voTabela) {
-		
+
 		BoResultadoVoCSNet boResultadoVo = new BoResultadoVoCSNet();
 		return boResultadoVo.formatarClasseEntidadeCSNet(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseNegocioCSNet(VoTabela voTabela) {
-		
+
 		BoResultadoVoCSNet boResultadoVo = new BoResultadoVoCSNet();
 		return boResultadoVo.formatarClasseNegocioCSNet(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseDaoCSNet(VoTabela voTabela) {
-		
+
 		BoResultadoVoCSNet boResultadoVo = new BoResultadoVoCSNet();
 		return boResultadoVo.formatarClasseDaoCSNet(voTabela);
-		
+
 	}
-	
+
 	public String gerarStringClasseDaoConexaoCSNet() {
-		
+
 		BoResultadoVoCSNet boResultadoVo = new BoResultadoVoCSNet();
 		return boResultadoVo.formatarClasseDaoConexaoCSNet();
-		
+
 	}
 
 }
