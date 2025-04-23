@@ -16,7 +16,7 @@ Just add these libraries to the project so you can run it.
 
 ## Home and main form
 
-![Formulário principal](/docs/images/home-and-main-form.png)
+![Formulário principal](/docs/images/home-and-generator-form.png)
 
 ## Setup form
 
